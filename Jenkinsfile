@@ -32,8 +32,7 @@ pipeline{
 			    steps{				
 				    bat """
 					    cd Selenium-Integration-Test
-					    java org.testng.TestNG testng.xml
-					    pause
+					    mvn clean test -DsuiteXmlFile=testng.xml
 				    """
 			    }
 		    }		
